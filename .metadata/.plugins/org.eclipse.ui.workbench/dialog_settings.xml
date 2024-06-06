@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.m2e.core.wizards.Maven2ImportWizard"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+	<section name="PreferencesImportWizard">
+		<item key="" value="C:\Users\User\Desktop\偏好設定.epf"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\User\Desktop\偏好設定.epf"/>
+		</list>
+	</section>
+</section>
