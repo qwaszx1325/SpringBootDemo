@@ -1,0 +1,10 @@
+package com.competnion.util;
+
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StendMail {
+
+	private JavaMailSender mailSender;
+}
