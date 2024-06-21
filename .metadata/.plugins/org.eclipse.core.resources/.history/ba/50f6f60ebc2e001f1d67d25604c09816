@@ -1,0 +1,5 @@
+package com.competnion.model;
+
+public class ServerResponseModel {
+
+}

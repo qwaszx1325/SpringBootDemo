@@ -1,0 +1,19 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: qqq13258596@gmail.com
+    password: shmsvswajjaufnhw
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          
+  main:
+  allow:
+  bean-definition-overriding:true
+            
+
+            

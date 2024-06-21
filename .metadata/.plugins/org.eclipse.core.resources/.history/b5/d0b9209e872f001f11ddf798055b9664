@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Demo</title>
+</head>
+<body>
+    <h1>WebSocket Demo</h1>
+    <input type="text" id="userId" placeholder="Enter user ID" />
+    <input type="text" id="message" placeholder="Enter your message here" />
+    <button onclick="sendMessage()">Send</button>
+    <ul id="messages"></ul>
+
+    <script type="text/javascript">
+        var userId = prompt("Enter your user ID");
+        var socket = new WebSocket("ws://localhost:8080/ws?userId=" + userId);
+
+        socket.onmessage = function(event) {
+            var messages = document.getElementById("messages");
+            var message = document.createElement("li");
+            message.appendChild(document.createTextNode(event.data));
+            messages.appendChild(message);
+        };
+
+        function sendMessage() {
+            var input = document.getElementById("message");
+            var recipientId = document.getElementById("userId").value;
+            socket.send(recipientId + ":" + input.value);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>

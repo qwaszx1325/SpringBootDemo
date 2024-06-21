@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Demo</title>
+    <style>
+        .own-message {
+            color: blue;
+        }
+        .other-message {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocket Demo</h1>
+    <input type="text" id="userId" placeholder="Enter user ID" />
+    <input type="text" id="message" placeholder="Enter your message here" />
+    <button onclick="sendMessage()">Send</button>
+    <ul id="messages"></ul>
+
+    <script type="text/javascript">
+        var userId = prompt("Enter your user ID");
+        var socket = new WebSocket("ws://localhost:8080/ws?userId=" + userId);
+
+        socket.onmessage = function(event) {
+            var messages = document.getElementById("messages");
+            var message = document.createElement("li");
+
+            var data = event.data.split(":");
+            var senderId = data[0];
+            var messageText = data.slice(1).join(":");
+
+            if (senderId === userId) {
+                message.className = 'own-message';
+                message.appendChild(document.createTextNode("Me: " + messageText));
+            } else {
+                message.className = 'other-message';
+                message.appendChild(document.createTextNode(senderId + ": " + messageText));
+            }
+
+            messages.appendChild(message);
+        };
+
+        function sendMessage() {
+            var input = document.getElementById("message");
+            										//這一串+自己的會員ID
+            var recipientId = document.getElementById("userId").value;
+            socket.send(userId + ":" + input.value);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>

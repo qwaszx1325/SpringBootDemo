@@ -1,0 +1,14 @@
+package com.competnion.util;
+
+import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurationSupport;
+
+public class WebSocketConfig extends WebSocketMessageBrokerConfigurationSupport{
+
+	@Override
+	protected void registerStompEndpoints(StompEndpointRegistry registry) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

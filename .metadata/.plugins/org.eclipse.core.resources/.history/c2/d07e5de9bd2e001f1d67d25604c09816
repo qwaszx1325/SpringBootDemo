@@ -1,0 +1,5 @@
+package com.competnion.util;
+
+public class ServletInitializer {
+
+}
