@@ -20,8 +20,7 @@
 
     <script type="text/javascript">
         var userId = prompt("Enter your user ID");
-        //												對應設定的網址
-        var socket = new WebSocket("ws://localhost:8080/test/ws?userId=" + userId);
+        var socket = new WebSocket("wss://324f-61-222-34-1.ngrok-free.app/test/ws?userId=" + userId);
 
         socket.onmessage = function(event) {
             var messages = document.getElementById("messages");
@@ -42,12 +41,29 @@
             messages.appendChild(message);
         };
 
+        socket.onopen = function(event) {
+            console.log("WebSocket connection established");
+        };
+
+        socket.onerror = function(error) {
+            console.error("WebSocket Error: ", error);
+        };
+
+        socket.onclose = function(event) {
+            console.log("WebSocket connection closed: ", event);
+        };
+
         function sendMessage() {
             var input = document.getElementById("message");
-            										//這一串+自己的會員ID
             var recipientId = document.getElementById("userId").value;
-            socket.send(userId + ":" + input.value);
-            input.value = '';
+            var message = userId + ":" + input.value;
+
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send(message);
+                input.value = '';
+            } else {
+                console.error("WebSocket is not open: ", socket.readyState);
+            }
         }
     </script>
 </body>

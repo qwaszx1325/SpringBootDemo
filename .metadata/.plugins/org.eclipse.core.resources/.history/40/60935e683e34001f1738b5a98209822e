@@ -1,0 +1,42 @@
+package com.competnion.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.competnion.util.StendMail;
+
+@Controller
+public class Demo {
+	@Autowired
+	private StendMail stendMail;
+
+	@GetMapping("/hello")
+	public String demo() {
+		stendMail.sendSimpleEmail("qwaszx1325@gmail.com", "Test Subject", "This is a test email.");
+
+		return "Hello";
+	}
+	
+	@Autowired
+    OrderService orderService;
+
+    @GetMapping("/ecpayCheckout")
+    public String ecpayCheckout(Model model) {
+        String aioCheckOutALLForm = orderService.ecpayCheckout();
+        model.addAttribute("aioCheckOutALLForm", aioCheckOutALLForm);
+        return "ecpayCheckout"; // 返回一个包含支付表单的 Thymeleaf 模板
+    }
+}

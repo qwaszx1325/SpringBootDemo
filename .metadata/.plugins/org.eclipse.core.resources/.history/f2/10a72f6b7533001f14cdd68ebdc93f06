@@ -1,0 +1,17 @@
+package com.competnion.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestECPay {
+
+	@Autowired
+	OrderService orderService;
+
+	@PostMapping("/ecpayCheckout")
+	public String ecpayCheckout() {
+		String aioCheckOutALLForm = orderService.ecpayCheckout();
+
+		return aioCheckOutALLForm;
+	}
+}

@@ -1,8 +1,0 @@
-package com.competnion.util;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class StendMail {
-
-}

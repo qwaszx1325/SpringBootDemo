@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>支付結果</title>
+</head>
+<body>
+    <h1>支付結果</h1>
+    <ul>
+        <!-- 遍歷並顯示所有參數 -->
+        <li th:each="entry : ${params}">
+            <span th:text="${entry.key}"></span>: <span th:text="${entry.value}"></span>
+        </li>
+    </ul>
+</body>
+</html>

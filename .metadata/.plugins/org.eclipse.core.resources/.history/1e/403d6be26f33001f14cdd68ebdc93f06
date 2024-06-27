@@ -1,0 +1,5 @@
+package com.competnion.config;
+
+public class ThymeleafConfig {
+
+}
