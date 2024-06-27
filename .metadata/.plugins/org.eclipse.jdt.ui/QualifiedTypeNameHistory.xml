@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
-    <fullyQualifiedTypeName name="org.springframework.mail.javamail.JavaMailSender"/>
-    <fullyQualifiedTypeName name="org.springframework.mail.SimpleMailMessage"/>
     <fullyQualifiedTypeName name="com.competnion.util.StendMail"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurationSupport"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker"/>
@@ -22,7 +19,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.WebSocketConfigurer"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.handler.TextWebSocketHandler"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.WebSocketSession"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
     <fullyQualifiedTypeName name="org.springframework.web.socket.TextMessage"/>
@@ -54,6 +50,14 @@
     <fullyQualifiedTypeName name="ecpay.payment.integration.AllInOne"/>
     <fullyQualifiedTypeName name="ecpay.payment.integration.domain.AioCheckOutALL"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.competnion.service.OrderService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.competnion.service.OrderService"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.net.openssl.ciphers.MessageDigest"/>
+    <fullyQualifiedTypeName name="java.security.MessageDigest"/>
+    <fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
+    <fullyQualifiedTypeName name="com.competnion.utils.ECPayUtils"/>
+    <fullyQualifiedTypeName name="java.util.UUID"/>
 </qualifiedTypeNameHistroy>

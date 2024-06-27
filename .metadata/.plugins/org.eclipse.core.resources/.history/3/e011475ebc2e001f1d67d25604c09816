@@ -1,7 +1,0 @@
-package com.competnion.util;
-
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurationSupport;
-
-public class WebSocketConfig extends WebSocketMessageBrokerConfigurationSupport{
-
-}
